@@ -1,0 +1,124 @@
+#INITIAL COMMIT
+ mkdir git-basic-exercises
+ cd git-basic-exercises
+ ls -a
+ git init
+ ls -a
+ git status
+ touch README.md 
+ ls -a
+ git status
+ git log
+ git add README.md 
+ git status
+ git rm --cached README.md
+ git status
+ git add README.md 
+ git commit -m "initial commit"
+ git log
+ 
+#MORE COMMITS
+ nano README.md 
+ cat README.md 
+ git status
+ git add README.md 
+ git commit -m "second commit"
+ nano README.md
+ git status
+ git add README.md
+ git commit -m "third commit"
+ git log
+ git checkout 5f62d41b2b9384060d48bf9f98d60ace43a48a70
+ cat README.md 
+ git checkout master
+ cat README.md 
+
+#BRANCHING
+ git branch
+ git checkout -b milkshake-flavours
+ git branch
+ git checkout master
+ git branch
+ git checkout milkshake-flavours
+ nano milkshakes.md
+ git status 
+ git add milkshakes.md
+ git commit -m "added initial flavours"
+ git log
+ git checkout master
+ git log
+ git checkout -b history
+ git log
+ history > history.txt 
+ git log
+ git add history.txt 
+ git commit -m "added history"
+ git log
+ nano README.md
+ git add README.md
+ git commit -m "random readme changes"
+ git checkout history
+ cat README.md
+ rm README.md | echo "booya" > README.md
+ git add README.md
+ git commit -m "rewrote readme"
+ 
+ git checkout master ls
+ git log
+ git checkout milkshake-flavours ls
+ git log 
+ git checkout history ls
+ git log
+
+#MERGING
+ git checkout master
+ git merge milshake-flavours
+ ls
+ git log 
+ git merge history 
+ ls
+ git log
+ git checkout history git log ... git checkout milkshake-flavours git log
+
+ git remote add origin https://github.com/boitshepo97/tshepi.git git push -u origin master
+Username for 'https://github.com': boitshepo.masemola@gmail.com
+Password for 'https://boitshepo.masemola@gmail.com@github.com': 
+ git log
+
+#PULLING AND REMOTES
+ cd ../
+ https://github.com/Umuzi-org/tech-department
+ git clone https://github.com/Umuzi-org/tech-department
+ cd tech-department
+ git branch 
+ git log
+ git branch -a 
+ git chechout -b projects/git-basic-exercises
+ git remote -v
+
+#MULTIPLE REPOS
+ git log
+ cd | cd git-basic-exercises
+ git log
+ cd
+ mkdir this-will-be-another-repo
+ cd this-will-be-another-repo
+ git init 
+ touch README.md
+ git add README.md
+ git commit -m "another readme"
+ cd | cd git-basic-exercises
+ git log 
+
+#GITIGNORE
+ touch ignore-me.db
+ git status
+ nano .gitignore 
+ git status
+ mkdir large-directory-that-should-be-local-only 
+ cd large-directory-that-should-be-local-only
+ nano README.md 
+ cd ..
+ nano .gitignore
+ git status
+ 
